@@ -4,7 +4,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 # Load model + tokenizer from Hugging Face Hub
 @st.cache_resource
 def load_model():
-    model_name = "harshhitha/English_Misspelling_Correction"  # ✅ corrected
+    model_name = "harshhitha/3_Misspelling_Correction"  # ✅ corrected
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
     return model, tokenizer
@@ -46,7 +46,6 @@ st.markdown(
     """
     <hr>
     <p style='text-align: center; color: #888; font-size:12px;'>
-    Built with ❤️ using Hugging Face & Streamlit
     </p>
     """,
     unsafe_allow_html=True
